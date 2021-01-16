@@ -1,15 +1,49 @@
-import React from 'react'
-// import UserListPage from '../UserlistPage/UserListPage'
+import React, { useEffect, useState } from 'react'
+import { UserData } from '../../components/UserData'
+import { Link } from 'react-router-dom'
+import './LandingPageMenu.css'
+import axios from 'axios'
+import LandingPageSearchBar from '../../components/search/LandingPageSearchBar'
 
 
-function LandingPage() { 
+const LandingPage = () => { 
+  const [profiles, setProfiles] = useState([])
+  const [query, setQuery] = useState('')
+  
+  useEffect(() => {
+    const fetchProfiles = async () => {
+      const response = await axios(`https://randomuser.me/api/?page=3&results=20&seed=abc/?inc=gender?name=${query}`)
+
+      setProfiles(response.results)
+
+    }
+    fetchProfiles()
+  }, [query])
+
   return (
     <div className="w-full h-screen grid place-items-center">
-      <div className="border-white border-2 p-6">
+      <div className="p-6">
         <h1 className="text-white font-bold text-2xl mb-3 "> <span className="font-thin text-3xl">Hello,</span> Emerald</h1>
         <p className="text-white font-thin text-xs mb-7">Welcome to your dashboard, kindly sort through the user base</p>
-        <input className="rounded-2xl mb-10 p-4 placeholder-opacity-100 bg-gray-200 focus:bg-white block w-full outline-none"  placeholder="Find a user"></input>
+        <LandingPageSearchBar getQuery={(q) => setQuery(q)}/>
         <h2 className="text-white font-light text-xs">Show Users</h2>
+
+        {/* Landing page Menu link */}
+        {UserData.map((item, index) => {
+          return (
+            <div className="userListMenu">
+              <li key={index} className={item.cName}>
+                <Link to={item.path}>
+                  <div className="icon-img">{item.icon}</div>
+                  <span className="menu-text">{item.title}</span>
+                </Link>
+              </li>
+            </div>
+          )
+        })
+
+        }
+
       </div>
     </div>
   )

@@ -24,6 +24,27 @@ body {
   font-weight: 700;
 }
 
+.bg-color {
+  background-color: #7946C1;
+}
+
+.page-no:hover {
+  background-color: pink;
+}
+
+.bg-color:hover {
+  background-color: #6325b9;
+}
+
+.next, .prev {
+  background-color: #E2E2EA;
+}
+
+.next:hover, .prev:hover{
+  background-color: #262A41;
+  outline: none;
+}
+
 .bg-primary {
   background-color: #262A41;
 }

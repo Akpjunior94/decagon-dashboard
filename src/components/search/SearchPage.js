@@ -10,7 +10,8 @@ const SearchPage = () => {
        
       />
       <CountryList/>    
-      <Toogle/>           
+      <Toogle/>
+      <p className="text-xs font-medium">Show Country</p>           
     </div>
   )
 }
