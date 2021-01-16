@@ -18,8 +18,8 @@ const Pagination = ({ profilesPerPage, totalProfiles, paginate  }) => {
 
           <div className='flex justify-end'>
           {pageNumbers.map(number => (
-            <li key={number} className='page-no border rounded border-pink-300 p-3 '>
-              <a onClick={() => paginate(number)} href='/#'>
+            <li key={number} onClick={() => paginate(number)} className='page-no border rounded border-pink-300 p-3 '>
+              <a >
                 {number}
               </a>
             </li>

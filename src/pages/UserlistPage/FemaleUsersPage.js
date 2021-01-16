@@ -16,7 +16,7 @@ const FemaleUsersPage = () => {
 
         const females = response.results.filter(data => data.gender === "female");
         
-          console.log(females)
+          // console.log(females)
           setProfiles(females);
           setIsLoading(false);
       });

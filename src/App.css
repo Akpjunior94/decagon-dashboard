@@ -28,6 +28,10 @@ body {
   background-color: #7946C1;
 }
 
+.page-no {
+  cursor:pointer;
+}
+
 .page-no:hover {
   background-color: pink;
 }

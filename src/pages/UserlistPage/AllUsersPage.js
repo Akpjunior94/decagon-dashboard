@@ -14,6 +14,9 @@ const AllUsersPage = () => {
       .then((response) => response.json())
       .then((response) => {
 
+
+        // const queryUsers = response.results.filter(data => data.name.first === "");
+
           console.log(response.results)
           setProfiles(response.results);
           setIsLoading(false);

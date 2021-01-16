@@ -18,13 +18,13 @@ const FemalePagination = ({ profilesPerPage, totalProfiles, paginate  }) => {
 
           <div className='flex justify-end'>
           {pageNumbers.map(number => (
-            <li key={number} className='page-no border rounded border-pink-300 p-3 '>
-              <a onClick={() => paginate(number)} href='/FemaleUsers'>
+            <li key={number} onClick={() => paginate(number)} className='page-no border rounded border-pink-300 p-3 '>
+              <a>
                 {number}
               </a>
             </li>
           ))}
-          <button className="prev rounded border mx-1  p-2 outline-none" ><span>&#60;</span></button>
+          <button className="prev rounded border mx-1  p-2 outline-none" ><span >&#60;</span></button>
           <button className="next rounded border  p-2 outline-none"><span>&#62;</span></button>
           </div>
         </ul>
