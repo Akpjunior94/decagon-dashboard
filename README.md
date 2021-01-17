@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2811387b-a1f7-450b-b05f-a08090f30e6a/deploy-status)](https://app.netlify.com/sites/decagon-users-dashboard/deploys)
+
 # Decagon UserList Dashboard
 
 USerlist Dashboard is a web App that give access to users profile through querying and filtering. Users profile can also be downloaded as csv files individually and per page.
