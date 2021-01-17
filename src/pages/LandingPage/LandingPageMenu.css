@@ -21,6 +21,13 @@
 
 } */
 
+#icon1{
+  background-color: #7946C1;
+}
+
+#icon2{
+  background-color: #30BBB5;
+}
 
 .userListMenu {
   display:inline-flex;

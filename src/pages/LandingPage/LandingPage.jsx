@@ -22,7 +22,7 @@ const LandingPage = () => {
             <div className="userListMenu">
               <li key={index} className={item.cName}>
                 <Link to={item.path}>
-                  <div className="icon-img">{item.icon}</div>
+                  <div className="icon-img" id={"icon"+index}>{item.icon}</div>
                   <span className="menu-text">{item.title}</span>
                 </Link>
               </li>
